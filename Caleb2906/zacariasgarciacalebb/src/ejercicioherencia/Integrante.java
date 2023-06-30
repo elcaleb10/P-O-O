@@ -81,4 +81,15 @@ public class Integrante {
         return RFC + ", " + nombre + ", " + apellidos + ", " +
                 fechaNacimiento + ", " + fechaIngreso;
     }
+    @Override
+    public boolean equals(Object obj) {
+    if (this == obj) {
+        return true;
+    }
+    if (obj == null || getClass() != obj.getClass()) {
+        return false;
+    }
+    Integrante integrante = (Integrante) obj;
+    return RFC.equals(integrante.RFC);
+    }
 }
